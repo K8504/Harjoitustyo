@@ -38,7 +38,7 @@ namespace Platform
         // Which keys are pressed
         private bool LeftPressed;
         private bool RightPressed;
-        private bool UpPressed;
+       // private bool UpPressed;
 
         // Enemies
         private Etana etana;
@@ -51,10 +51,12 @@ namespace Platform
         private Tree tree;
         private Flower flower;
 
+        /*
         float positionX, positionY;     // Position of the character
         float velocityX, velocityY;     // Velocity of the character
         float gravity = 0.5f;           // How strong is gravity
-
+        */
+        
         // Audio
         private MediaElement mediaElement;
 
@@ -244,6 +246,7 @@ namespace Platform
             }
         }
 
+        /*
         void Update(float time)
         {
             positionX += velocityX * time;      // Apply horizontal velocity to X position
@@ -261,7 +264,7 @@ namespace Platform
             if (velocityY < -6.0f)       // If character is still ascending in the jump
                 velocityY = -6.0f;      // Limit the speed of ascent
         }
-
+        */
 
         /// <summary>
         /// Check if some keys are released.
@@ -276,11 +279,11 @@ namespace Platform
                 case VirtualKey.Right:
                     RightPressed = false;
                     break;
-                case VirtualKey.Up:
+               /* case VirtualKey.Up:
                     UpPressed = false;
                     break;
                 default:
-                    break;
+                    break;*/
             }
         }
 
@@ -298,11 +301,11 @@ namespace Platform
                 case VirtualKey.Right:
                     RightPressed = true;
                     break;
-                case VirtualKey.Up:
+               /* case VirtualKey.Up:
                     UpPressed = true;
                     break;
                 default:
-                    break;
+                    break;*/
             }
         }
         private void BackButton_Click(object sender, RoutedEventArgs e)
